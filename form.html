@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Formulaire</title>
+  <link rel="stylesheet" href="form.css">
+  <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+
+
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+  <script type="text/javascript" type="text/javascript">
+    Parse.initialize("j184XZ7KWqaYayWEquK42Lcy6i6SffeylQip2BYu",
+      "RNAgo4UGpaOenG7o2WK8UVuGVlLmFSFqkO8jChf4", "Pt3bcy4A9uWxe05MWI6gCgV6lRSWXk2k6c03yWaY"
+    ); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
+    Parse.serverURL = 'https://parseapi.back4app.com/'
+  </script>
+</head>
+<body>
+    <script>
+        (function(){
+          emailjs.init("vyGRUzdK18W4uzF7o");
+        })();
+      </script>
+  <form id="signup-form">
+    <label for="username">Nom d'utilisateur :</label>
+    <input type="text" id="username" name="username">
+    <label for="email">Email :</label>
+    <input type="email" id="email" name="email">
+    <label for="password">Mot de passe :</label>
+    <input type="password" id="password" name="password">
+    <label for="meeting-select">Sélectionnez une réunion :</label>
+    <select id="meeting-select" name="meeting-select">
+      <option value=""></option>
+      <!-- options pour les réunions disponibles viendront ici -->
+    </select>
+    <label for="annee-scolaire">année scolaire :</label>
+    <select id="annee-scolaire-select" name="annee-scolaire">
+      <option value=""></option>
+      <!-- options pour l'annee scolaire -->
+    </select>
+    <input type="submit" value="S'inscrire">
+    
+  </form>
+  <form id="login-form">
+    <label for="username">Nom d'utilisateur :</label>
+    <input type="text" id="usernames" name="username">
+    <label for="emeil">Email :</label>
+    <input type="text" id="emails" name="email">
+
+    <label for="password">Mot de passe :</label>
+    <input type="password" id="passwords" name="password">
+
+    <input type="submit" value="Se connecter">
+  </form>
+  <div id="result"></div>
+
+  <button id="modify-button" style="display: none;">Modify</button>
+
+  <form id="update-form" style="display: none;">
+
+    <label for="email">Adresse email</label>
+    <input type="email" id="mail" name="email" required>
+    <label for="password">Nouveau mot passe :</label>
+    <input type="password" id="newPasswords" name="password">
+    <button type="submit">Mettre à jour</button>
+    <button type="submit" style="display: none;">Update Meeting</button>
+  </form>
+  <script src="form.js"></script>
+</body>
+
+</html>
