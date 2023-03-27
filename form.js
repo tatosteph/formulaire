@@ -43,7 +43,7 @@ document.getElementById("signup-form").addEventListener("submit", function(event
   user.set("username", username);
   user.set("email", email);
   user.set("password", password);
-//tato
+
   // Générer un lien unique pour l'utilisateur
   var uniqueLink = "http://192.168.1.229:5500/form.html";
 
