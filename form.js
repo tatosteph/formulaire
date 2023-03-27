@@ -1,5 +1,5 @@
 
-
+//tato
  var Meeting = Parse.Object.extend("meeting");
 var query = new Parse.Query(Meeting);
 query.find().then(function(meetings) {
